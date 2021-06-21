@@ -1,3 +1,20 @@
+# TO DO:
+## Preparation: 21/06
+- [x] Make GitHub repo
+- [x] Clone MVC boilerplate
+- [x] Connect to local server
+  
+- [x] Read up on CRUD project approach
+- [x] Generate database
+- [ ] Structure database, foreign keys 
+  
+- [ ] Plan the structure
+  - [ ] Make at least 3 classes: Student, Teacher, Class
+  - [ ] Teacher and Student class can extend
+
+
+
+
 # Title: Create, Read, Update, Delete
 
 - Repository: `php-crud`
