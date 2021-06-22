@@ -7,17 +7,29 @@
 
         <p><a href="index.php">Back to homepage</a></p>
 
-        <?php foreach ($students as $student) {
-            echo "students: <br>";
-            echo $student->getId();
-            echo "<br>";
-            echo $student->getName();
-            echo "<br>";
-            echo $student->getEmail();
-            echo "<br>";
-            echo $student->getclassId();
-        };
-        ?>
+        <table class="table">
+            <h4>Students:</h4>
+
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">email</th>
+                <th scope="col">class Id</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($students as $student) {
+                echo "<tr>";
+                echo "<td class='w-25'>{$student->getId()}</td>";
+                echo "<td class='w-25'>{$student->getName()}</td>";
+                echo "<td class='w-25'>{$student->getEmail()}</td>";
+                echo "<td class='w-25'>{$student->getClassId()}</td>";
+                echo "</tr>";
+            };
+            ?>
+            </tbody>
+        </table>
 
     </section>
 <?php require 'includes/footer.php'?>
