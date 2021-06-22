@@ -11,7 +11,6 @@ class TeacherLoader
         $handle = $pdo->prepare('SELECT id, name, email, class_id FROM teacher');
         $handle->execute();
         $teachers = $handle->fetchAll();
-        var_dump($teachers);
 
 
         foreach ($teachers as $teacher) {

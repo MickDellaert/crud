@@ -3,6 +3,14 @@
 Anything complex should be calculated in the model -->
 <section>
 
+    <p><a href="index.php?page=info">To info page</a></p>
+    <p><a href="index.php?page=classes">To classes page</a></p>
+    <p><a href="index.php?page=students">To students page</a></p>
+    <p><a href="index.php?page=teachers">To teachers page</a></p>
+
+
+    <p>Put your content here.</p>
+
     <?php foreach ($students as $student) {
         echo "students: <br>";
         echo $student->getId();
@@ -42,8 +50,6 @@ Anything complex should be calculated in the model -->
 
 
 
-    <p><a href="index.php?page=info">To info page</a></p>
 
-    <p>Put your content here.</p>
 </section>
 <?php require 'includes/footer.php'?>
