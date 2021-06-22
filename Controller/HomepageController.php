@@ -6,11 +6,18 @@ class HomepageController
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
     {
-        //this is just example code, you can remove the line below
-        $student = new Student(1,'test', 'test',1);
+        $studentLoader = new StudentLoader();
+        $students = $studentLoader->getStudents();
+//        var_dump($students);
 
-        //you should not echo anything inside your controller - only assign vars here
-        // then the view will actually display them.
+        $classLoader = new ClassesLoader();
+        $classes = $classLoader->getClasses();
+//        var_dump($classes);
+
+        $teacherLoader = new TeacherLoader();
+        $teachers = $teacherLoader->getTeachers();
+//        var_dump($teachers);
+
 
         //load the view
         require 'View/homepage.php';

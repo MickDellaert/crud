@@ -4,11 +4,11 @@ declare(strict_types=1);
 //include all your model files here
 require 'Model/Dbconnection.php';
 require 'Model/Student.php';
-//require 'Model/StudentLoader.php';
-//require 'Model/Classes.php';
-//require 'Model/ClassLoader.php';
-//require 'Model/Student.php';
-//require 'Model/TeacherLoader.php';
+require 'Model/StudentLoader.php';
+require 'Model/Classes.php';
+require 'Model/ClassesLoader.php';
+require 'Model/Teacher.php';
+require 'Model/TeacherLoader.php';
 
 //include all your controllers here
 require 'Controller/HomepageController.php';

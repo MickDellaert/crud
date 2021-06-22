@@ -13,10 +13,10 @@
   - [x] Teacher and Student class can extend
 
 ## 22/06
-- [ ] Add classes to models
-- [ ] Add required to index
-- [ ] Add controllers
-- [ ] Test controllers and methods
+- [x] Add classes to models
+- [x] Add required to index
+- [x] Add controllers
+- [x] Test controllers and methods
 
 
 
