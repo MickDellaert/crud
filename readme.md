@@ -6,11 +6,19 @@
   
 - [x] Read up on CRUD project approach
 - [x] Generate database
-- [ ] Structure database, foreign keys 
+- [x] Structure database, foreign keys 
   
-- [ ] Plan the structure
-  - [ ] Make at least 3 classes: Student, Teacher, Class
-  - [ ] Teacher and Student class can extend
+- [x] Plan the structure
+  - [x] Make at least 3 classes: Student, Teacher, Class
+  - [x] Teacher and Student class can extend
+
+## 22/06
+- [ ] Add classes to models
+- [ ] Add required to index
+- [ ] Add controllers
+- [ ] Test controllers and methods
+
+
 
 
 
