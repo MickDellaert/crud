@@ -14,8 +14,8 @@ require 'Model/TeacherLoader.php';
 require 'Controller/HomepageController.php';
 require 'Controller/InfoController.php';
 require 'Controller/ClassesController.php';
-require 'Controller/StudentsController.php';
-require 'Controller/TeachersController.php';
+require 'Controller/StudentController.php';
+require 'Controller/TeacherController.php';
 
 
 
@@ -27,11 +27,12 @@ if(isset($_GET['page']) && $_GET['page'] === 'classes') {
     $controller = new ClassesController();
 }
 if(isset($_GET['page']) && $_GET['page'] === 'students') {
-    $controller = new StudentsController();
+    $controller = new StudentController();
 }
 if(isset($_GET['page']) && $_GET['page'] === 'teachers') {
-    $controller = new TeachersController();
+    $controller = new TeacherController();
 }
+
 
 
 $controller->render($_GET, $_POST);

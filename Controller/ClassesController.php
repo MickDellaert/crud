@@ -15,10 +15,6 @@ class ClassesController
         $teacherLoader = new TeacherLoader();
         $teachers = $teacherLoader->getTeachers();
 
-        $classSelect = ($classLoader->getClassById(2));
-        var_dump($classSelect);
-        echo $classSelect->getName();
-
         //load the view
         require 'View/classes.php';
     }

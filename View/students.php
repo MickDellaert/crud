@@ -7,6 +7,11 @@
 
         <p><a href="index.php">Back to homepage</a></p>
 
+        <form method="get">
+            <input type="submit" name="new-student" value="Add" class="btn btn-primary">
+        </form>
+
+
         <table class="table">
             <h4>Students:</h4>
 
@@ -17,23 +22,36 @@
                 <th scope="col">Email</th>
                 <th scope="col">Class Id</th>
                 <th scope="col">Class Name</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+
 
             </tr>
             </thead>
             <tbody>
             <?php foreach ($students as $student) {
                 echo "<tr>";
-                echo "<td class='w-25'>{$student->getId()}</td>";
-                echo "<td class='w-25'>{$student->getName()}</td>";
-                echo "<td class='w-25'>{$student->getEmail()}</td>";
-                echo "<td class='w-25'>{$student->getClassId()}</td>";
-                echo "<td class='w-25'>{$classLoader->getClassById($student->getClassId())->getName()}</td>";
+                echo "<td>{$student->getId()}</td>";
+                echo "<td>{$student->getName()}</td>";
+                echo "<td>{$student->getEmail()}</td>";
+                echo "<td>{$student->getClassId()}</td>";
+                echo "<td>{$classLoader->getClassById($student->getClassId())->getName()}</td>";
+                echo "<td>
+                        <button class='btn btn-warning'>Update</button>
+                    </td>";
+                echo "<td>
+                        <button class='btn btn-danger'>Delete</button>
+                    </td>";
                 echo "</tr>";
+
+
 
             };
             ?>
             </tbody>
         </table>
+
+
 
     </section>
 

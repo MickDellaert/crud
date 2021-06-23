@@ -26,7 +26,7 @@
                 echo "<td class='w-25'>{$class->getName()}</td>";
                 echo "<td class='w-25'>{$class->getLocation()}</td>";
                 echo "<td class='w-25'>{$class->getTeacherId()}</td>";
-                echo "<td class='w-25'>{$teacherLoader->getTeacherById($class->getTeacherId())->getName()}</td>";
+                echo "<td class='w-25'>{$teacherLoader->getTeacherById($class->getId())->getName()}</td>";
 
                 echo "</tr>";
             };

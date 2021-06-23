@@ -22,12 +22,14 @@
 - [x] Access data from different table
 
 ## 23/06
-- [ ] Add edit button
-- [ ] Add delete button
-- [ ] Add create new button
+- [x] Add edit button
+- [x] Add delete button
+- [x] Add create new button
+- [ ] Redirecting to new pages
+- [ ] Functional buttons
 
 ## 24/06
-- [x] Add page to edit an existing entity
+- [] Add page to edit an existing entity
 - [ ] Edge cases
 - [ ] Teacher: list of all students
 - [ ] Clickable links in tables
