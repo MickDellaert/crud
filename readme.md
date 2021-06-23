@@ -17,6 +17,26 @@
 - [x] Add required to index
 - [x] Add controllers
 - [x] Test controllers and methods
+- [x] Make different pages 
+- [x] Add links to pages  
+- [x] Access data from different table
+
+## 23/06
+- [ ] Add edit button
+- [ ] Add delete button
+- [ ] Add create new button
+
+## 24/06
+- [x] Add page to edit an existing entity
+- [ ] Edge cases
+- [ ] Teacher: list of all students
+- [ ] Clickable links in tables
+
+## 24/06
+- [ ] Code cleanup, comments
+- [ ] Styling
+
+
 
 
 
