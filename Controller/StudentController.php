@@ -6,23 +6,28 @@ class StudentController
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
     {
-        //you should not echo anything inside your controller - only assign vars here
-        // then the view will actually display them.
+
         $studentLoader = new StudentLoader();
         $students = $studentLoader->getStudents();
 
         $classLoader = new ClassesLoader();
         $classes = $classLoader->getClasses();
 
-
-
         //load the view
-        require 'View/students.php';
+        if (isset($_GET['page']) && $_GET['page'] === 'students') {
+            require 'View/students.php';
+        }
+
+
+        if (isset($_GET['students']) && $_GET['students'] === 'new-student') {
+            require 'View/new-student.php';
+        }
+
+
+        if (isset($_GET['submit-student']) && $_GET['submit-student'] === 'submit-student') {
+            require 'View/students.php';
+        }
     }
 }
 
-class StudentCreateController
 
-if (isset($_GET['new-student']) && $_GET['new-student'] === 'Add') {
-    require 'View/student_create.php';
-}

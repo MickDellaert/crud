@@ -12,7 +12,6 @@ require 'Model/TeacherLoader.php';
 
 //include all your controllers here
 require 'Controller/HomepageController.php';
-require 'Controller/InfoController.php';
 require 'Controller/ClassesController.php';
 require 'Controller/StudentController.php';
 require 'Controller/TeacherController.php';
@@ -20,18 +19,24 @@ require 'Controller/TeacherController.php';
 
 
 $controller = new HomepageController();
-if(isset($_GET['page']) && $_GET['page'] === 'info') {
-    $controller = new InfoController();
-}
+
 if(isset($_GET['page']) && $_GET['page'] === 'classes') {
     $controller = new ClassesController();
 }
-if(isset($_GET['page']) && $_GET['page'] === 'students') {
+if(isset($_GET['page']) && $_GET['page'] === 'students' || isset($_GET['students']) && $_GET['students'] === 'new-student' || isset($_GET['submit-student']) && $_GET['submit-student'] === 'submit-student'){
     $controller = new StudentController();
 }
 if(isset($_GET['page']) && $_GET['page'] === 'teachers') {
     $controller = new TeacherController();
 }
+
+
+//$controller = new StudentController();
+//
+//if (isset($_GET['new-student']) && $_GET['new-student'] === 'Add') {
+//    $controller = new StudentCreateController();
+//
+//}
 
 
 
