@@ -9,9 +9,10 @@
         <p><a href="index.php">Back to homepage</a></p>
 
         <form class="mb-3" method="get">
-            <button name='students' class='btn btn-primary' value='new-student'>Add student</button>
+            <button name='students' class='btn btn-primary btn-sm' value='new-student'>Add student</button>
         </form>
 
+        <form class="mb-3" method="get">
 
         <table class="table">
             <h4>Students:</h4>
@@ -37,19 +38,20 @@
                 echo "<td>{$student->getClassId()}</td>";
                 echo "<td>{$classLoader->getClassById($student->getClassId())->getName()}</td>";
                 echo "<td>
-                        <button type='submit' name='detailStudent' class='btn btn-info' value='{$student->getId()}'>Details</button>
+                        <button name='detail-student' class='btn btn-info btn-sm' value='{$student->getId()}'>Details</button>
                     </td>";
                 echo "<td>
-                        <button type='submit' name='editStudent' class='btn btn-warning' value='{$student->getId()}'>Update</button>
+                        <button type='submit' name='edit-student' class='btn btn-warning btn-sm' value='{$student->getId()}'>Update</button>
                     </td>";
                 echo "<td>
-                        <button type='submit' name='deleteStudent' class='btn btn-danger' value='{$student->getId()}'>Delete</button>
+                        <button type='submit' name='delete-student' class='btn btn-danger btn-sm' value='{$student->getId()}'>Delete</button>
                     </td>";
                 echo "</tr>";
             };
             ?>
             </tbody>
         </table>
+        </form>
 
 
 

@@ -16,16 +16,9 @@
         <h1>BeCode Registration</h1>
 
         <form action="index.php" method="get">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                <input type="submit" name="page" value="students">
-                </li>
-                <li class="nav-item">
-                <input type="submit" name="page" value="teachers">
-                </li>
-                <li class="nav-item">
-                <input type="submit" name="page" value="classes">
-                </li>
+                <button class="btn btn-outline-secondary" type="submit" name="page" value="students">Students</button>
+                    <button class="btn btn-outline-secondary" type="submit" name="page" value="teachers">Teachers</button>
+                    <button class="btn btn-outline-secondary" type="submit" name="page" value="classes">Classes</button>
             </ul>
         </form>
 

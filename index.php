@@ -23,7 +23,7 @@ $controller = new HomepageController();
 if(isset($_GET['page']) && $_GET['page'] === 'classes') {
     $controller = new ClassesController();
 }
-if(isset($_GET['page']) && $_GET['page'] === 'students' || isset($_GET['students']) && $_GET['students'] === 'new-student' || isset($_GET['submit-student']) && $_GET['submit-student'] === 'submit-student'){
+if(isset($_GET['page']) && $_GET['page'] === 'students' || isset($_GET['students']) && $_GET['students'] === 'new-student' || isset($_GET['submit-student']) && $_GET['submit-student'] === 'submit-student' || isset($_GET['detail-student'])){
     $controller = new StudentController();
 }
 if(isset($_GET['page']) && $_GET['page'] === 'teachers') {
