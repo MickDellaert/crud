@@ -2,9 +2,10 @@
 
 class StudentLoader
 {
-    private array $studentArr=[];
+    private array $studentArr = [];
 
-    public function getStudents() {
+    public function getStudents()
+    {
         $connection = new Dbconnection();
         $pdo = $connection->openConnection();
 
@@ -13,9 +14,18 @@ class StudentLoader
         $students = $handle->fetchAll();
 
         foreach ($students as $student) {
-            $this->studentArr[] = new Student((int) $student['id'], (string) $student['name'], (string) $student['email'], (int) $student['class_id']);
+            $this->studentArr[] = new Student((int)$student['id'], (string)$student['name'], (string)$student['email'], (int)$student['class_id']);
         }
         return $this->studentArr;
+    }
+
+    public function getStudentById(int $id)
+    {
+        foreach ($this->studentArr as $student) {
+            if ($student->getId() === $id) {
+                return $student;
+            }
+        }
     }
 }
 

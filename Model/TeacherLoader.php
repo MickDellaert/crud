@@ -2,9 +2,10 @@
 
 class TeacherLoader
 {
-    private array $teacherArr=[];
+    private array $teacherArr = [];
 
-    public function getTeachers() {
+    public function getTeachers()
+    {
         $connection = new Dbconnection();
         $pdo = $connection->openConnection();
 
@@ -14,9 +15,18 @@ class TeacherLoader
 
 
         foreach ($teachers as $teacher) {
-            $this->teacherArr[] = new Teacher((int) $teacher['id'], (string) $teacher['name'], (string) $teacher['email'], (int) $teacher['class_id']);
+            $this->teacherArr[] = new Teacher((int)$teacher['id'], (string)$teacher['name'], (string)$teacher['email'], (int)$teacher['class_id']);
         }
 
         return $this->teacherArr;
+    }
+
+    public function getTeacherById(int $id)
+    {
+        foreach ($this->teacherArr as $teacher) {
+            if ($teacher->getId() === $id) {
+                return $teacher;
+            }
+        }
     }
 }

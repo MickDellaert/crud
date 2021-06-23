@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
 class StudentsController
 {
@@ -10,6 +10,16 @@ class StudentsController
         // then the view will actually display them.
         $studentLoader = new StudentLoader();
         $students = $studentLoader->getStudents();
+
+        $classLoader = new ClassesLoader();
+        $classes = $classLoader->getClasses();
+
+
+//        $loader = new StudentLoader();
+//        $loader2 = new SchoolClassLoader();
+
+//        $data = $loader->getStudents();
+//        $data2 = $loader2->getClasses();
 
         //load the view
         require 'View/students.php';

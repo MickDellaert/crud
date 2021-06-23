@@ -82,10 +82,5 @@ Anything complex should be calculated in the model -->
         </tbody>
     </table>
 
-
-
-
-
-
 </section>
 <?php require 'includes/footer.php'?>

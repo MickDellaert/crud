@@ -17,4 +17,13 @@ class ClassesLoader
         }
         return $this->classArr;
     }
+
+    public function getClassById(int $id)
+    {
+        foreach ($this->classArr as $class) {
+            if ($class->getId() === $id) {
+                return $class;
+            }
+        }
+    }
 }

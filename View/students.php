@@ -14,8 +14,10 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
-                <th scope="col">email</th>
-                <th scope="col">class Id</th>
+                <th scope="col">Email</th>
+                <th scope="col">Class Id</th>
+                <th scope="col">Class Name</th>
+
             </tr>
             </thead>
             <tbody>
@@ -25,11 +27,14 @@
                 echo "<td class='w-25'>{$student->getName()}</td>";
                 echo "<td class='w-25'>{$student->getEmail()}</td>";
                 echo "<td class='w-25'>{$student->getClassId()}</td>";
+                echo "<td class='w-25'>{$classLoader->getClassById($student->getClassId())->getName()}</td>";
                 echo "</tr>";
+
             };
             ?>
             </tbody>
         </table>
 
     </section>
+
 <?php require 'includes/footer.php'?>
