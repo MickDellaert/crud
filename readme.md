@@ -26,17 +26,20 @@
 - [x] Add delete button
 - [x] Add create new button
 - [x] Redirecting to new pages
-- [ ] Functional buttons
+- [x] Functional buttons
 
 ## 24/06
+- [x] Insert working
+- [x] Add page to make a new entity  
+- [x] Redirection working  
+- [x] Clickable buttons in tables
 - [ ] Add page to edit an existing entity
+
+## 25/06
 - [ ] Edge cases
 - [ ] Teacher: list of all students
-- [ ] Clickable links in tables
-
-## 24/06
 - [ ] Code cleanup, comments
-- [ ] Styling
+- [ ] Further styling
 
 
 
