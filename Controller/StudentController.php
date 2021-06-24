@@ -21,7 +21,8 @@ class StudentController
             require 'View/students.php';
         }
 
-        if (isset($_GET['page']) && $_GET['page'] === 'new-student') {
+        if (isset($_GET['page']) && $_GET['page'] === 'new-student' && empty($_POST)) {
+
             require 'View/new-student.php';
         }
 
@@ -34,7 +35,14 @@ class StudentController
             if (isset($_POST['name']) && isset($_POST['email'])) {
                 $studentLoader->addStudent($_POST['name'], $_POST['email'], $_POST['class_id']);
             }
-//            require 'View/new-student.php';
+
+            $studentLoader = new StudentLoader();
+            $students = $studentLoader->getStudents();
+
+            $classLoader = new ClassesLoader();
+            $classes = $classLoader->getClasses();
+
+            require 'View/students.php';
         }
 
         if (isset($_GET['detail-student'])) {
