@@ -27,6 +27,17 @@ class StudentLoader
             }
         }
     }
+
+    public function addStudent($name, $email, $class_id)
+    {
+        $connection = new Dbconnection();
+        $pdo = $connection->openConnection();
+        $handle = $pdo->prepare('INSERT INTO student (name, email, class_id) VALUES (:name, :email, :class_id)');
+        $handle->bindValue(':name', $name);
+        $handle->bindValue(':email', $email);
+        $handle->bindValue(':class_id', $class_id);
+        $handle->execute();
+    }
 }
 
 

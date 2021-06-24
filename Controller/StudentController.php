@@ -16,18 +16,25 @@ class StudentController
         $teacherLoader = new TeacherLoader();
         $teachers = $teacherLoader->getTeachers();
 
-
         //load the view
         if (isset($_GET['page']) && $_GET['page'] === 'students') {
             require 'View/students.php';
         }
 
-        if (isset($_GET['students']) && $_GET['students'] === 'new-student') {
+        if (isset($_GET['page']) && $_GET['page'] === 'new-student') {
             require 'View/new-student.php';
         }
 
-        if (isset($_GET['submit-student']) && $_GET['submit-student'] === 'submit-student') {
-            require 'View/students.php';
+//        if (isset($_POST['new-student'])) {
+//            require 'View/new-student.php';
+//        }
+
+        if (isset($_POST['submit-student'])) {
+
+            if (isset($_POST['name']) && isset($_POST['email'])) {
+                $studentLoader->addStudent($_POST['name'], $_POST['email'], $_POST['class_id']);
+            }
+//            require 'View/new-student.php';
         }
 
         if (isset($_GET['detail-student'])) {
@@ -36,9 +43,7 @@ class StudentController
             $selectedClass = ($classLoader->getClassById($selectedStudent->getClassId()));
             $selectedTeacher = ($teacherLoader->getTeacherById($selectedClass->getTeacherId()));
 
-
             require 'View/student-details.php';
-
         }
     }
 }

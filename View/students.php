@@ -9,10 +9,12 @@
         <p><a href="index.php">Back to homepage</a></p>
 
         <form class="mb-3" method="get">
-            <button name='students' class='btn btn-primary btn-sm' value='new-student'>Add student</button>
-        </form>
 
-        <form class="mb-3" method="get">
+            <div class="form-group mb-3">
+
+            <button name='page' class='btn btn-primary btn-sm' value='new-student'>Add student</button>
+            </div>
+
 
         <table class="table">
             <h4>Students:</h4>
