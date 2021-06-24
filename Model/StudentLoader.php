@@ -38,6 +38,15 @@ class StudentLoader
         $handle->bindValue(':class_id', $class_id);
         $handle->execute();
     }
+
+    public function deleteStudent($id)
+    {
+        $connection = new Dbconnection();
+        $pdo = $connection->openConnection();
+        $handle = $pdo->prepare('DELETE FROM student WHERE :id = id');
+        $handle->bindValue(':id', $id);
+        $handle->execute();
+    }
 }
 
 

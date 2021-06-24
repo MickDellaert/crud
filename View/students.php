@@ -43,10 +43,10 @@
                         <button name='detail-student' class='btn btn-info btn-sm' value='{$student->getId()}'>Details</button>
                     </td>";
                 echo "<td>
-                        <button type='submit' name='edit-student' class='btn btn-warning btn-sm' value='{$student->getId()}'>Update</button>
+                        <button name='edit-student' class='btn btn-warning btn-sm' value='{$student->getId()}'>Update</button>
                     </td>";
                 echo "<td>
-                        <button type='submit' name='delete-student' class='btn btn-danger btn-sm' value='{$student->getId()}'>Delete</button>
+                        <button name='delete-student' class='btn btn-danger btn-sm' value='{$student->getId()}'>Delete</button>
                     </td>";
                 echo "</tr>";
             };

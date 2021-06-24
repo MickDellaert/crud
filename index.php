@@ -20,11 +20,23 @@ require 'Controller/TeacherController.php';
 
 $controller = new HomepageController();
 
-if(isset($_GET['page']) && $_GET['page'] === 'classes') {
+if(isset($_GET['page']) && $_GET['page'] === 'classes'){
     $controller = new ClassesController();
 }
 
-if(isset($_GET['page']) && $_GET['page'] === 'students' || isset($_GET['page']) && $_GET['page'] === 'new-student' || isset($_GET['submit-student']) && $_GET['submit-student'] === 'submit-student' || isset($_GET['detail-student'])){
+if(isset($_GET['page']) && $_GET['page'] === 'students'){
+    $controller = new StudentController();
+}
+
+if(isset($_GET['page']) && $_GET['page'] === 'new-student'){
+    $controller = new StudentController();
+}
+
+//if(isset($_GET['submit-student']) && $_GET['submit-student'] === 'submit-student'){
+//    $controller = new StudentController();
+//}
+
+if(isset($_GET['detail-student']) || isset($_GET['delete-student'])){
     $controller = new StudentController();
 }
 
