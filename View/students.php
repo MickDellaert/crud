@@ -8,11 +8,11 @@
 
         <p><a href="index.php">Back to homepage</a></p>
 
-        <form class="mb-3" method="get">
+        <form class="mb-3" method="POST">
 
             <div class="form-group mb-3">
 
-            <button name='page' class='btn btn-primary btn-sm' value='new-student'>Add student</button>
+            <button name='new-student' class='btn btn-primary btn-sm' value='new-student'>Add student</button>
             </div>
 
 
@@ -32,25 +32,36 @@
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($students as $student) {
-                echo "<tr>";
-                echo "<td>{$student->getId()}</td>";
-                echo "<td>{$student->getName()}</td>";
-                echo "<td>{$student->getEmail()}</td>";
-                echo "<td>{$student->getClassId()}</td>";
-                echo "<td>{$classLoader->getClassById($student->getClassId())->getName()}</td>";
-                echo "<td>
-                        <button name='detail-student' class='btn btn-info btn-sm' value='{$student->getId()}'>Details</button>
-                    </td>";
-                echo "<td>
-                        <button name='edit-student' class='btn btn-warning btn-sm' value='{$student->getId()}'>Update</button>
-                    </td>";
-                echo "<td>
-                        <button name='delete-student' class='btn btn-danger btn-sm' value='{$student->getId()}'>Delete</button>
-                    </td>";
-                echo "</tr>";
-            };
-            ?>
+            <?php foreach ($students as $student): ?>
+                <tr>
+                <td>
+                    <?php echo $student->getId() ?>
+                </td>
+                <td>
+                    <?php echo $student->getName() ?>
+                </td>
+                <td>
+                    <?php echo $student->getEmail()?>
+                </td>
+                <td>
+                    <?php echo $student->getClassId()?>
+                </td>
+                <td>
+                    <?php echo $classLoader->getClassById($student->getClassId())->getName()?>
+                </td>
+                <td>
+                    <button name="detail-student" class='btn btn-info btn-sm' value="<?php echo $student->getId()?>">Details</button>
+                </td>
+                <td>
+                    <button name="update-student" class='btn btn-warning btn-sm' value="<?php echo $student->getId()?>">Update</button>
+                </td>
+                <td>
+                    <button name="delete-student" class='btn btn-danger btn-sm' value="<?php echo $student->getId()?>">Delete</button>
+                </td>
+                </tr>
+            <?php endforeach; ?>
+
+
             </tbody>
         </table>
         </form>

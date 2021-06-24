@@ -47,6 +47,19 @@ class StudentLoader
         $handle->bindValue(':id', $id);
         $handle->execute();
     }
+
+    public function updateStudent($name, $email, $class_id, $id)
+    {
+        $connection = new Dbconnection();
+        $pdo = $connection->openConnection();
+        $handle = $pdo->prepare('UPDATE student set name = :name, email = :email, class_id = :class_id WHERE id = :id');
+        $handle->bindValue(':name', $name);
+        $handle->bindValue(':email', $email);
+        $handle->bindValue(':class_id', $class_id);
+        $handle->bindValue(':id', $id);
+
+        $handle->execute();
+    }
 }
 
 

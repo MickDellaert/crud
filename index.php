@@ -28,17 +28,26 @@ if(isset($_GET['page']) && $_GET['page'] === 'students'){
     $controller = new StudentController();
 }
 
-if(isset($_GET['page']) && $_GET['page'] === 'new-student'){
-    $controller = new StudentController();
-}
-
-//if(isset($_GET['submit-student']) && $_GET['submit-student'] === 'submit-student'){
+//if(isset($_GET['page']) && $_GET['page'] === 'new-student'){
 //    $controller = new StudentController();
 //}
-
-if(isset($_GET['detail-student']) || isset($_GET['delete-student'])){
-    $controller = new StudentController();
-}
+//
+//
+////if(isset($_GET['submit-student']) && $_GET['submit-student'] === 'submit-student'){
+////    $controller = new StudentController();
+////}
+//
+//if(isset($_GET['detail-student'])){
+//    $controller = new StudentController();
+//}
+//
+//if(isset($_GET['update-student'])){
+//    $controller = new StudentController();
+//}
+//
+//if(isset($_GET['delete-student'])){
+//    $controller = new StudentController();
+//}
 
 if(isset($_GET['page']) && $_GET['page'] === 'teachers') {
     $controller = new TeacherController();

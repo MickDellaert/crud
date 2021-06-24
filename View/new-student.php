@@ -24,7 +24,7 @@
             </select>
         </div>
         <div class="form-group">
-            <button type="submit" name='submit-student' class='btn btn-primary btn-sm' value='submit-student'>Submit student</button>
+            <button type="submit" name='submit-student' class='btn btn-primary btn-sm' value='submit-student'>Submit new student</button>
         </div>
 
     </form>
