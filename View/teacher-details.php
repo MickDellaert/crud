@@ -2,11 +2,12 @@
 <!-- this is the view, try to put only simple if's and loops here.
 Anything complex should be calculated in the model -->
 <section>
+    <h4>Teachers</h4>
+    <hr>
+
     <form class="mb-3" method="POST">
 
         <table class="table">
-            <h4>Teachers:</h4>
-
             <thead>
             <tr>
                 <th scope="col">#</th>

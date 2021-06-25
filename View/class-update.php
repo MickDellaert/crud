@@ -2,11 +2,13 @@
     <!-- this is the view, try to put only simple if's and loops here.
     Anything complex should be calculated in the model -->
     <section>
+
+        <h4>Classes</h4>
+        <hr>
+
         <form class="mb-3" method="POST">
 
             <table class="table">
-                <h4>Update classes:</h4>
-
                 <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -32,10 +34,10 @@
         </form>
         <form action="" method="POST">
 
-            <div class="row mb-3">
-                <label for="class-name" class="col-sm-2 col-form-label">Name</label>
-                <input type="text" class="form-control" name="id" value="<?php echo $selectedClass->getId()?>">
-            </div>
+<!--            <div class="row mb-3">-->
+<!--                <label for="class-id" class="col-sm-2 col-form-label">Id</label>-->
+<!--                <input type="text" class="form-control" name="id" value="--><?php //echo $selectedClass->getId()?><!--">-->
+<!--            </div>-->
             <div class="row mb-3">
                 <label for="class-name" class="col-sm-2 col-form-label">Name</label>
                 <input type="text" class="form-control" name="name" value="<?php echo $selectedClass->getName()?>">

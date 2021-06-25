@@ -1,6 +1,7 @@
 <?php require 'includes/header.php' ?>
 
-    <h4>Students page</h4>
+    <h4>Students</h4>
+    <hr>
 
     <p><a href="index.php">Back to homepage</a></p>
 

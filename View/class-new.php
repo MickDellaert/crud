@@ -1,8 +1,7 @@
 <?php require 'includes/header.php' ?>
 
-    <h4>Classes page</h4>
-
-    <p><a href="index.php">Back to homepage</a></p>
+    <h4>Classes</h4>
+    <hr>
 
     <form action="" method="post">
 

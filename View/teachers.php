@@ -4,9 +4,8 @@
     Anything complex should be calculated in the model -->
     <section>
 
-        <h4>Teachers page</h4>
-
-        <p><a href="index.php">Back to homepage</a></p>
+        <h4>Teachers</h4>
+        <hr>
 
         <form class="mb-3" method="GET">
             <div class="form-group mb-3">
@@ -18,7 +17,6 @@
         <form class="mb-3" method="POST">
 
             <table class="table">
-                <h4>Teachers:</h4>
 
                 <thead>
                 <tr>

@@ -33,19 +33,14 @@
 - [x] Add page to make a new entity  
 - [x] Redirection working  
 - [x] Clickable buttons in tables
-- [ ] Add page to edit an existing entity
+- [x] Add page to edit an existing entity
 
 ## 25/06
+- [x] Working crud for all three entities
 - [ ] Edge cases
 - [ ] Teacher: list of all students
 - [ ] Code cleanup, comments
 - [ ] Further styling
-
-
-
-
-
-
 
 
 # Title: Create, Read, Update, Delete

@@ -2,6 +2,7 @@
 
 class StudentLoader
 {
+    private array $studentClassArr = [];
     private array $studentArr = [];
 
     public function getStudents()
@@ -27,6 +28,7 @@ class StudentLoader
             }
         }
     }
+
 
     public function addStudent($name, $email, $class_id)
     {
@@ -55,7 +57,7 @@ class StudentLoader
         $handle = $pdo->prepare('UPDATE student set name = :name, email = :email, class_id = :class_id WHERE id = :id');
         $handle->bindValue(':name', $name);
         $handle->bindValue(':email', $email);
-        $handle->bindValue(':teacher_id', $teacher_id);
+        $handle->bindValue(':class_id', $class_id);
         $handle->bindValue(':id', $id);
 
         $handle->execute();

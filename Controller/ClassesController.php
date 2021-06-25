@@ -1,5 +1,7 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
+
+//Code needs cleanup with conditional statements, lot's of repetition now
 
 class ClassesController
 {
@@ -11,6 +13,7 @@ class ClassesController
 
         $studentLoader = new StudentLoader();
         $students = $studentLoader->getStudents();
+
 
         $classLoader = new ClassesLoader();
         $classes = $classLoader->getClasses();
@@ -27,7 +30,7 @@ class ClassesController
             require 'View/class-new.php';
         }
 
-        if (isset($_GET['class-new'])&& empty($POST)) {
+        if (isset($_GET['class-new']) && empty($POST)) {
             $classes = $classLoader->getClasses();
 
             require 'View/class-new.php';
@@ -59,7 +62,7 @@ class ClassesController
         if (isset($POST['detail-class'])) {
 
             $selectedClass = $classLoader->getClassById(intval($POST['detail-class']));
-//            $selectedStudent = ($studentLoader->getStudentById($selectedClass->getId()));
+            $selectedStudent = ($studentLoader->getStudentById($selectedClass->getId()));
             $selectedTeacher = ($teacherLoader->getTeacherById($selectedClass->getTeacherId()));
 
             require 'View/class-details.php';
@@ -68,7 +71,7 @@ class ClassesController
         if (isset($POST['update-class'])) {
 
             $selectedClass = $classLoader->getClassById(intval($POST['update-class']));
-//            $selectedStudent = ($studentLoader->getStudentById($selectedClass->getId()));
+//          $selectedStudent = ($studentLoader->getStudentById($selectedClass->getId()));
             $selectedTeacher = ($teacherLoader->getTeacherById($selectedClass->getTeacherId()));
 
             require 'View/class-update.php';
