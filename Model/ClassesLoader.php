@@ -4,6 +4,7 @@ class ClassesLoader
 {
     private array $classArr=[];
 
+    // Get array with all objects from the selected table in the database
     public function getClasses() {
         $connection = new Dbconnection();
         $pdo = $connection->openConnection();
@@ -18,6 +19,7 @@ class ClassesLoader
         return $this->classArr;
     }
 
+    // Get array with one object from the selected table in the database selected by it's id
     public function getClassById(int $id)
     {
         foreach ($this->classArr as $class) {
@@ -27,6 +29,7 @@ class ClassesLoader
         }
     }
 
+    // Function that inserts a new row in the table from inputs received by POST method
     public function addClass($name, $location, $teacher_id)
     {
         $connection = new Dbconnection();
@@ -38,6 +41,7 @@ class ClassesLoader
         $handle->execute();
     }
 
+    // Function that deletes a row in the table by it's selected id
     public function deleteClass($id)
     {
         $connection = new Dbconnection();
@@ -47,6 +51,7 @@ class ClassesLoader
         $handle->execute();
     }
 
+    // Function that updates a row in the table by from inputs received by POST method
     public function updateClass($name, $location, $teacher_id, $id)
     {
         $connection = new Dbconnection();

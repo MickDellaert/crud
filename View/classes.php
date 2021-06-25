@@ -17,7 +17,6 @@
         <form class="mb-3" method="POST">
 
             <table class="table">
-                <h4>Classes:</h4>
 
                 <thead>
                 <tr>
@@ -65,9 +64,6 @@
                 </tbody>
             </table>
         </form>
-
-
-
 
     </section>
 
