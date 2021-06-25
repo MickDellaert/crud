@@ -26,4 +26,37 @@ class ClassesLoader
             }
         }
     }
+
+    public function addClass($name, $location, $teacher_id)
+    {
+        $connection = new Dbconnection();
+        $pdo = $connection->openConnection();
+        $handle = $pdo->prepare('INSERT INTO classes (name, location, teacher_id) VALUES (:name, :location, :teacher_id)');
+        $handle->bindValue(':name', $name);
+        $handle->bindValue(':location', $location);
+        $handle->bindValue(':teacher_id', $teacher_id);
+        $handle->execute();
+    }
+
+    public function deleteClass($id)
+    {
+        $connection = new Dbconnection();
+        $pdo = $connection->openConnection();
+        $handle = $pdo->prepare('DELETE FROM classes WHERE :id = id');
+        $handle->bindValue(':id', $id);
+        $handle->execute();
+    }
+
+    public function updateClass($name, $location, $teacher_id, $id)
+    {
+        $connection = new Dbconnection();
+        $pdo = $connection->openConnection();
+        $handle = $pdo->prepare('UPDATE classes set name = :name, location = :location, teacher_id = :teacher_id WHERE id = :id');
+        $handle->bindValue(':name', $name);
+        $handle->bindValue(':location', $location);
+        $handle->bindValue(':teacher_id', $teacher_id);
+        $handle->bindValue(':id', $id);
+
+        $handle->execute();
+    }
 }

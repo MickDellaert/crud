@@ -41,6 +41,14 @@ if(isset($_GET['page']) && $_GET['page'] === 'teacher-new'){
     $controller = new TeacherController();
 }
 
+if(isset($_GET['page']) && $_GET['page'] === 'classes') {
+    $controller = new ClassesController();
+}
+
+if(isset($_GET['page']) && $_GET['page'] === 'class-new'){
+    $controller = new ClassesController();
+}
+
 
 
 $controller->render($_GET, $_POST);
