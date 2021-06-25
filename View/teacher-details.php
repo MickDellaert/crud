@@ -5,7 +5,7 @@ Anything complex should be calculated in the model -->
     <form class="mb-3" method="POST">
 
         <table class="table">
-            <h4>Students:</h4>
+            <h4>Teachers:</h4>
 
             <thead>
             <tr>
@@ -15,20 +15,17 @@ Anything complex should be calculated in the model -->
                 <th scope="col">Class Id</th>
                 <th scope="col">Class Name</th>
                 <th scope="col">Class Location</th>
-                <th scope="col">Teacher</th>
             </tr>
             </thead>
             <tbody>
             <?php
 
-                echo "<td>{$selectedStudent->getId()}</td>";
-                echo "<td>{$selectedStudent->getName()}</td>";
-                echo "<td>{$selectedStudent->getEmail()}</td>";
-                echo "<td>{$selectedStudent->getClassId()}</td>";
-                echo "<td>{$selectedClass->getName()}</td>";
-                echo "<td>{$selectedClass->getLocation()}</td>";
-                echo "<td>{$selectedTeacher->getName()}</td>";
-
+            echo "<td>{$selectedTeacher->getId()}</td>";
+            echo "<td>{$selectedTeacher->getName()}</td>";
+            echo "<td>{$selectedTeacher->getEmail()}</td>";
+            echo "<td>{$selectedTeacher->getClassId()}</td>";
+            echo "<td>{$selectedClass->getName()}</td>";
+            echo "<td>{$selectedClass->getLocation()}</td>";
             ?>
             </tbody>
         </table>

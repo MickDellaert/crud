@@ -15,6 +15,74 @@ class TeacherController
         $classes = $classLoader->getClasses();
 
         //load the view
-        require 'View/teachers.php';
+        if (isset($_GET['page']) && $_GET['page'] === 'teachers' && empty($POST)) {
+            require 'View/teachers.php';
+        }
+
+        if (isset($_GET['page']) && $_GET['page'] === 'teacher-new' && empty($_POST)) {
+            require 'View/teacher-new.php';
+        }
+
+        if (isset($_GET['teacher-new']) && empty($POST)) {
+            $teachers = $teacherLoader->getTeachers();
+            require 'View/teacher-new.php';
+        }
+
+        if (isset($_POST['submit-teacher']) && (isset($POST['name']) && isset($POST['email']))) {
+
+            $teacherLoader->addTeacher($_POST['name'], $_POST['email'], $_POST['class_id']);
+
+            $teacherLoader = new TeacherLoader();
+            $teachers = $teacherLoader->getTeachers();
+
+            $classLoader = new ClassesLoader();
+            $classes = $classLoader->getClasses();
+
+            require 'View/teachers.php';
+        }
+
+        if (isset($POST['delete-teacher'])) {
+
+            $teacherLoader->deleteTeacher($POST['delete-teacher']);
+
+            $teacherLoader = new TeacherLoader();
+            $teachers = $teacherLoader->getTeachers();
+
+            require 'View/teachers.php';
+        }
+
+        if (isset($POST['detail-teacher'])) {
+
+            $selectedTeacher = $teacherLoader->getTeacherById(intval($POST['detail-teacher']));
+            $selectedClass = ($classLoader->getClassById($selectedTeacher->getClassId()));
+            $selectedTeacher = ($teacherLoader->getTeacherById($selectedClass->getTeacherId()));
+
+            require 'View/teacher-details.php';
+        }
+
+        if (isset($POST['update-teacher'])) {
+
+            $selectedTeacher = $teacherLoader->getTeacherById(intval($POST['update-teacher']));
+            $selectedClass = ($classLoader->getClassById($selectedTeacher->getClassId()));
+            $selectedTeacher = ($teacherLoader->getTeacherById($selectedClass->getTeacherId()));
+
+            require 'View/teacher-update.php';
+        }
+
+
+        if (isset($_POST['submit-update-teacher'])) {
+
+            $teacherLoader->updateTeacher($POST['name'], $POST['email'], $POST['class_id'], $POST['id']);
+
+            $teacherLoader = new TeacherLoader();
+            $teachers = $teacherLoader->getTeachers();
+
+            $classLoader = new ClassesLoader();
+            $classes = $classLoader->getClasses();
+
+            require 'View/teachers.php';
+        }
+
+
     }
 }

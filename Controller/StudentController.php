@@ -22,7 +22,11 @@ class StudentController
             require 'View/students.php';
         }
 
-        if (isset($_POST['new-student'])) {
+        if (isset($_GET['page']) && $_GET['page'] === 'new-student' && empty($_POST)) {
+            require 'View/new-student.php';
+        }
+
+        if (isset($_GET['new-student'])&& empty($POST)) {
             $students = $studentLoader->getStudents();
             require 'View/new-student.php';
         }

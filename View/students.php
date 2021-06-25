@@ -8,13 +8,14 @@
 
         <p><a href="index.php">Back to homepage</a></p>
 
+        <form class="mb-3" method="GET">
+        <div class="form-group mb-3">
+
+            <button name='page' class='btn btn-primary btn-sm' value='new-student'>Add student</button>
+        </div>
+        </form>
+
         <form class="mb-3" method="POST">
-
-            <div class="form-group mb-3">
-
-            <button name='new-student' class='btn btn-primary btn-sm' value='new-student'>Add student</button>
-            </div>
-
 
         <table class="table">
             <h4>Students:</h4>
