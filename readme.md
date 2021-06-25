@@ -42,6 +42,23 @@
 - [ ] Code cleanup, comments
 - [ ] Further styling
 
+## Thoughts:
+It was a very interesting and challenging assignment from which I have learned a lot.
+- Getting a better understanding off POST and GET method differences
+- Properly setting up (or at least trying to) a database and thinking about the structure to use it afterwards
+- The benefits of working with a MVC model
+- The benefits of working with OOP: at first it seamed like a hassle, but as your project grows it becomes a lot easier to reuse objects and methods.
+- The redirecting off the pages was very confusing at first and I got stuck and lost lots of time not getting it to work. 
+Again this became clearer and I could see the benefits of doing it this way (even though it still needs fixes)
+
+- Overall I need to take more time to plan and structure a project and code in general. As usual, I went ahead and distilled some order our off the chaos and that way things became clear, but I wasted a lot of time.
+- I'm still not sure if I set up the database correctly, there was a problem when deleting rows because of foreign key constraints. By setting the key properties to cascade all entities with a link to the deleted row get removed as well. This could be useful in some scenarios and it got rid of my errors :P Need to look into this.
+- I was wondering if the classes/teachers relationship was a many to many and if so, do you need an extra table to connect them?
+
+- Live and learn :)
+
+
+ 
 
 # Title: Create, Read, Update, Delete
 
